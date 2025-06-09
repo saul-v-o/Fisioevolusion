@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fisioevolusion - Fisioterapia en Mazatlán</title>
+  
+  <link rel="icon" type="image/x-icon" href="imgs/logo.png">
+  <!-- Google Fonts Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fisioevolusion - Fisioterapia en Mazatlán",
+    "url": "https://fisioevolusion.com",
+    "logo": "https://fisioevolusion.com/imgs/logo.png",
+    "sameAs": [
+      "https://instagram.com/fisioevolusion"  
+    ]
+  }
+  </script>
+
+
+  <style>
+    :root {
+      --color-primary: #005f73;
+      --color-secondary: #0a9396;
+      --color-text-dark: #001219;
+      --color-gray-light: #94a1b2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8;
+      color: var(--color-text-dark);
+    }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VHRH2NBL63"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VHRH2NBL63');
+</script>
+<body>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <img src="imgs/logo.png" alt="Fisioevolusion" class="h-10" />
+      <nav class="hidden md:flex space-x-12 font-semibold text-lg">
+        <a href="index.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Inicio">Inicio</a>
+        <a href="services.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Servicios">Servicios</a>
+        <a href="about.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Nosotros">Nosotros</a>
+        <a href="contact.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Contacto">Contacto</a>
+      </nav>
+      <a href="https://wa.link/mbeasv" class="hidden md:inline-block bg-[var(--color-primary)] text-white px-6 py-2 rounded-md font-semibold hover:bg-[var(--color-secondary)] transition" title="Agenda tu cita">
+        Agenda tu cita
+      </a>
+      <button id="btn-menu" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8 text-[var(--color-text-dark)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md">
+      <a href="index.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Inicio">Inicio</a>
+      <a href="services.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Servicios">Servicios</a>
+      <a href="about.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Nosotros">Nosotros</a>
+      <a href="contact.html" class="block px-6 py-3 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Contacto">Contacto</a>
+      <a href="https://wa.link/mbeasv" class="block bg-[var(--color-primary)] text-white px-6 py-3 m-4 rounded-md font-semibold text-center hover:bg-[var(--color-secondary)]" title="Agenda tu cita">Agenda tu cita</a>
+    </nav>
+  </header>
+
+  <main class="pt-24 container mx-auto px-6 max-w-7xl">
+
+    <!-- HERO -->
+    <section class="flex flex-col md:flex-row items-center gap-12 mt-12">
+      <div class="md:w-1/2 space-y-8">
+        <h1 class="text-5xl font-extrabold leading-tight text-[var(--color-primary)]">
+          Fisioevolusion<br />
+        </h1>
+        <h2 class="text-3xl font-bold text-[var(--color-primary)]">
+          Cuidamos tu bienestar físico
+        </h2>
+        <p class="text-lg text-gray-700 max-w-lg">
+          En Fisioevolusion, ofrecemos atención profesional de fisioterapia en Mazatlán. Contamos con tratamientos personalizados de rehabilitación, masajes terapéuticos y más.
+        </p>
+        <a href="https://wa.link/mbeasv" class="inline-block bg-[var(--color-primary)] text-white px-8 py-3 rounded-md font-semibold hover:bg-[var(--color-secondary)] transition" title="Agenda tu cita">
+          Reserva tu cita
+        </a>
+      </div>
+      <div class="md:w-1/2">
+        <img src="imgs/rehabilitacion_fisica.jpg" alt="Fisioterapia profesional" class="w-full max-w-xl mx-auto" />
+      </div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section class="mt-20 bg-[var(--color-secondary)] rounded-lg p-8 text-white text-center shadow-lg">
+      <h2 class="text-2xl font-bold mb-4">¿Sabías que...?</h2>
+      <p id="dato-curioso" class="text-lg">La fisioterapia ayuda a reducir el uso de medicamentos para el dolor crónico.</p>
+    </section>
+
+    <!-- SERVICIOS DESTACADOS -->
+    <section class="mt-20">
+      <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-10 text-center">Nuestros Servicios</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+          <div class="mb-5 text-[var(--color-secondary)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.34 6.235M12 14l-6.16-3.422a12.083 12.083 0 00-.34 6.235" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Rehabilitación avanzada</h3>
+          <p class="text-gray-600">Tratamientos personalizados para recuperar tu movilidad y calidad de vida.</p>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+          <div class="mb-5 text-[var(--color-secondary)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 14s1.5 2 4 2 4-2 4-2" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Terapia manual</h3>
+          <p class="text-gray-600">Técnicas especializadas para aliviar el dolor muscular y mejorar la función.</p>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+          <div class="mb-5 text-[var(--color-secondary)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m-6-8h6" />
+              <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Ejercicios terapéuticos</h3>
+          <p class="text-gray-600">Programas de ejercicios para fortalecer y mejorar tu flexibilidad.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mt-28 bg-[var(--color-primary)] rounded-lg p-12 max-w-4xl mx-auto text-center text-white shadow-lg">
+      <h2 class="text-4xl font-extrabold mb-6">¿Quieres empezar tu recuperación hoy?</h2>
+      <p class="mb-8 text-lg max-w-xl mx-auto">Contáctanos y recibe asesoría profesional personalizada.</p>
+      <a href="https://wa.link/mbeasv" class="inline-block bg-[var(--color-secondary)] hover:bg-[#007c8a] transition font-semibold rounded-md px-10 py-4" title="Agenda tu cita">
+        Agenda tu cita
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-20 bg-[var(--color-primary)] text-white py-6 text-center font-semibold">
+    &copy; 2025 Fisioevolusion. Todos los derechos reservados.
+  </footer>
+
+  <script>
+  // Menú móvil toggle
+  const btnMenu = document.getElementById('btn-menu');
+  const menuMovil = document.getElementById('menu-movil');
+  btnMenu.addEventListener('click', () => {
+    menuMovil.classList.toggle('hidden');
+  });
+
+  // Curiosidades dinámicas
+  const datosCuriosos = [
+    "La fisioterapia ayuda a reducir el uso de medicamentos para el dolor crónico.",
+    "Una buena postura previene muchas lesiones musculoesqueléticas.",
+    "La fisioterapia acelera la recuperación después de una cirugía.",
+    "Los fisioterapeutas también tratan trastornos neurológicos como el Parkinson o la parálisis cerebral.",
+    "El ejercicio terapéutico es una de las herramientas más efectivas para la rehabilitación."
+  ];
+
+  const elementoDato = document.getElementById("dato-curioso");
+
+  let indiceActual = 0;
+
+  setInterval(() => {
+    indiceActual = (indiceActual + 1) % datosCuriosos.length;
+    elementoDato.textContent = datosCuriosos[indiceActual];
+  }, 7000); // Cambia cada 7 segundos
+</script>
+
+</body>
+</html>

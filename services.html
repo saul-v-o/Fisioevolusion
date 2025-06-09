@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios | Fisioevolusion</title>
+
+  <link rel="icon" type="image/x-icon" href="imgs/logo.png">
+  <!-- Google Fonts Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --color-primary: #005f73;
+      --color-secondary: #0a9396;
+      --color-text-dark: #001219;
+      --color-gray-light: #94a1b2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8;
+      color: var(--color-text-dark);
+    }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VHRH2NBL63"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VHRH2NBL63');
+</script>
+
+<body>
+
+  <!-- HEADER -->
+ <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <img src="imgs/logo.png" alt="Fisioevolusion" class="h-10" />
+      <nav class="hidden md:flex space-x-12 font-semibold text-lg">
+        <a href="index.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Inicio">Inicio</a>
+        <a href="services.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Servicios">Servicios</a>
+        <a href="about.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Nosotros">Nosotros</a>
+        <a href="contact.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Contacto">Contacto</a>
+      </nav>
+      <a href="https://wa.link/mbeasv" class="hidden md:inline-block bg-[var(--color-primary)] text-white px-6 py-2 rounded-md font-semibold hover:bg-[var(--color-secondary)] transition" title="Agenda tu cita">
+        Agenda tu cita
+      </a>
+      <button id="btn-menu" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8 text-[var(--color-text-dark)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md">
+      <a href="index.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Inicio">Inicio</a>
+      <a href="services.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Servicios">Servicios</a>
+      <a href="about.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Nosotros">Nosotros</a>
+      <a href="contact.html" class="block px-6 py-3 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Contacto">Contacto</a>
+      <a href="https://wa.link/mbeasv" class="block bg-[var(--color-primary)] text-white px-6 py-3 m-4 rounded-md font-semibold text-center hover:bg-[var(--color-secondary)]" title="Agenda tu cita">Agenda tu cita</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="pt-24 container mx-auto px-6 max-w-7xl">
+
+    <!-- SERVICIOS -->
+    <section class="mt-12">
+      <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-10 text-center">Nuestros Servicios</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Servicio 1 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Dolor de Nervio Ciático</h3>
+          <p class="text-gray-600">Tratamiento especializado para aliviar el dolor intenso causado por la compresión o irritación del nervio ciático.</p>
+        </div>
+        <!-- Servicio 2 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Hernias Discales</h3>
+          <p class="text-gray-600">Tratamientos especializados para aliviar el dolor y mejorar la movilidad en casos de hernias discales en la columna vertebral.</p>
+        </div>
+        <!-- Servicio 3 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Lesiones Deportivas</h3>
+          <p class="text-gray-600">Rehabilitación para lesiones deportivas, ayudando a recuperar la fuerza y flexibilidad necesarias para volver a la actividad física.</p>
+        </div>
+        <!-- Servicio 4 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Dolor de Espalda</h3>
+          <p class="text-gray-600">Evaluación y terapias personalizadas para el dolor crónico o agudo en la espalda, incluyendo la zona lumbar y dorsal.</p>
+        </div>
+        <!-- Servicio 5 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Rodilla</h3>
+          <p class="text-gray-600">Rehabilitación y tratamiento para lesiones, dolor o incomodidad en la rodilla, promoviendo su funcionalidad y recuperación.</p>
+        </div>
+        <!-- Servicio 6 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Esguinces</h3>
+          <p class="text-gray-600">Atención integral para la recuperación de esguinces, con un enfoque en la movilidad y la reducción del dolor.</p>
+        </div>
+        <!-- Servicio 7 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Luxaciones y Subluxaciones</h3>
+          <p class="text-gray-600">Tratamiento para la recuperación de luxaciones o subluxaciones articulares, restaurando la función y reduciendo el dolor.</p>
+        </div>
+        <!-- Servicio 8 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Post Operados</h3>
+          <p class="text-gray-600">Recuperación postquirúrgica mediante terapias que mejoran la movilidad, fuerza y funcionalidad después de una operación.</p>
+        </div>
+        <!-- Servicio 9 -->
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+          <h3 class="text-xl font-semibold mb-3">Masajes Deportivos</h3>
+          <p class="text-gray-600">Masajes especializados para aliviar tensiones, mejorar la circulación y promover una recuperación rápida después del ejercicio físico.</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-20 bg-[var(--color-primary)] text-white py-6 text-center font-semibold">
+    &copy; 2025 Fisioevolusion. Todos los derechos reservados.
+  </footer>
+
+  <!-- SCRIPTS -->
+
+
+  <script>
+  // Menú móvil toggle
+  const btnMenu = document.getElementById('btn-menu');
+  const menuMovil = document.getElementById('menu-movil');
+  btnMenu.addEventListener('click', () => {
+    menuMovil.classList.toggle('hidden');
+  });
+  </script>
+</body>
+</html>

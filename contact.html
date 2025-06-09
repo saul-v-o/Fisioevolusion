@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Contacto | Fisioevolusion</title>
+
+  <link rel="icon" type="image/x-icon" href="imgs/logo.png">
+  
+  <!-- Google Fonts Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --color-primary: #005f73;
+      --color-secondary: #0a9396;
+      --color-text-dark: #001219;
+      --color-gray-light: #94a1b2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8;
+      color: var(--color-text-dark);
+    }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VHRH2NBL63"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VHRH2NBL63');
+</script>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <img src="imgs/logo.png" alt="Fisioevolusion" class="h-10" />
+      <nav class="hidden md:flex space-x-12 font-semibold text-lg">
+        <a href="index.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Inicio">Inicio</a>
+        <a href="services.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Servicios">Servicios</a>
+        <a href="about.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Nosotros">Nosotros</a>
+        <a href="contact.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Contacto">Contacto</a>
+      </nav>
+      <a href="https://wa.link/mbeasv" class="hidden md:inline-block bg-[var(--color-primary)] text-white px-6 py-2 rounded-md font-semibold hover:bg-[var(--color-secondary)] transition" title="Agenda tu cita">
+        Agenda tu cita
+      </a>
+      <button id="btn-menu" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8 text-[var(--color-text-dark)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md">
+      <a href="index.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Inicio">Inicio</a>
+      <a href="services.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Servicios">Servicios</a>
+      <a href="about.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Nosotros">Nosotros</a>
+      <a href="contact.html" class="block px-6 py-3 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Contacto">Contacto</a>
+      <a href="https://wa.link/mbeasv" class="block bg-[var(--color-primary)] text-white px-6 py-3 m-4 rounded-md font-semibold text-center hover:bg-[var(--color-secondary)]" title="Agenda tu cita">Agenda tu cita</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="pt-24 container mx-auto px-6 max-w-7xl font-sans text-gray-800">
+
+  <section id="contact" class="mt-16">
+
+    <h2 class="text-4xl font-bold mb-8 text-[var(--color-primary)]">Contáctanos</h2>
+
+    <div class="flex flex-col md:flex-row gap-12">
+
+      <!-- Mapa -->
+      <div class="md:w-1/2 rounded-lg overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.6622458040774!2d-106.42776472444451!3d23.255374707600094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f53133406bb9f%3A0x2ffb7157c1c3a8d6!2sFisioevolusion!5e0!3m2!1ses!2smx!4v1732823498622!5m2!1ses!2smx"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Información -->
+      <div class="md:w-1/2 flex flex-col justify-center text-lg space-y-6">
+        <p><strong class="text-[var(--color-primary)]">Dirección:</strong> Calle Jacinto Vázquez #258 Colonia Fco. Villa, Mazatlán, Sinaloa</p>
+        <p><strong class="text-[var(--color-primary)]">Teléfono:</strong> (669) 274 6885</p>
+        <p>
+          <strong class="text-[var(--color-primary)]">Correo electrónico:</strong>
+          <a href="mailto:fisioevolusionmzt@gmail.com" class="text-[var(--color-secondary)] hover:underline" title="fisioevolusionmzt@gmail.com">
+            fisioevolusionmzt@gmail.com
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="mt-16 text-lg max-w-md mx-auto space-y-6">
+
+      <h3 class="text-2xl font-semibold text-[var(--color-primary)] mb-4 text-center">Horarios de atención</h3>
+
+      <p><strong class="text-[var(--color-secondary)]">Lunes a Viernes:</strong> 9:00 AM - 6:00 PM</p>
+      <p><strong class="text-[var(--color-secondary)]">Sábados:</strong> 9:00 AM - 2:00 PM</p>
+      <p><strong class="text-[var(--color-secondary)]">Domingos:</strong> Cerrado</p>
+    </div>
+
+    <div class="mt-16 text-lg max-w-md mx-auto space-y-6">
+      <h3 class="text-2xl font-semibold text-[var(--color-primary)] mt-12 mb-4 text-center">Síguenos en nuestras redes sociales</h3>
+
+      <p class="flex justify-center gap-6">
+        <a href="https://www.facebook.com/share/1BXwMLWWt3/?mibextid=wwXIfr" target="_blank"
+          class="text-[var(--color-secondary)] hover:text-[var(--color-primary)] font-semibold flex items-center gap-2" title="facebook">
+          <i class="fab fa-facebook fa-lg"></i> Facebook
+        </a>
+        <a href="https://instagram.com/fisioevolusion" target="_blank"
+          class="text-[var(--color-secondary)] hover:text-[var(--color-primary)] font-semibold flex items-center gap-2" title="instagram">
+          <i class="fab fa-instagram fa-lg"></i> Instagram
+        </a>
+        <a href="https://wa.link/mbeasv" target="_blank"
+          class="text-[var(--color-secondary)] hover:text-[var(--color-primary)] font-semibold flex items-center gap-2" title="whatsapp">
+          <i class="fab fa-whatsapp fa-lg"></i> WhatsApp
+        </a>
+      </p>
+
+    </div>
+
+  </section>
+</main>
+
+
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--color-primary)] text-white py-6 text-center font-semibold mt-10">
+    &copy; 2025 Fisioevolusion. Todos los derechos reservados.
+  </footer>
+
+  <script>
+  // Menú móvil toggle
+  const btnMenu = document.getElementById('btn-menu');
+  const menuMovil = document.getElementById('menu-movil');
+  btnMenu.addEventListener('click', () => {
+    menuMovil.classList.toggle('hidden');
+  });
+  </script>
+</body>
+</html>
+
