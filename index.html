@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fisioevolusion es una clínica de fisioterapia en Mazatlán, los fisioterapeutas se especializan en lesiones deportivas, dolores musculares y rehabilitación personalizada.">
+  <meta property="og:title" content="Fisioevolusion - Fisioterapia en Mazatlán" />
+  <meta property="og:description" content="Clínica de fisioterapia especializada en rehabilitación, masajes y más en Mazatlán." />
+  <meta property="og:image" content="https://fisioevolusion.com/imgs/logo.png" />
+  <meta property="og:url" content="https://fisioevolusion.com" />
+  <meta property="og:type" content="website" />
+
+
   <title>Fisioevolusion - Fisioterapia en Mazatlán</title>
   
   <link rel="icon" type="image/x-icon" href="imgs/logo.png">
@@ -38,7 +46,52 @@
       background-color: #f0f4f8;
       color: var(--color-text-dark);
     }
+
+    .fade-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .zoom-section {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 1.6s ease-out;
+    }
+
+    .zoom-section.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .slide-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 1.6s ease-out;
+    }
+
+    .slide-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slide-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 1.6s ease-out;
+    }
+
+    .slide-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
   </style>
+
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -84,7 +137,7 @@
 
     <!-- HERO -->
     <section class="flex flex-col md:flex-row items-center gap-12 mt-12">
-      <div class="md:w-1/2 space-y-8">
+      <div class="md:w-1/2 space-y-8 slide-left">
         <h1 class="text-5xl font-extrabold leading-tight text-[var(--color-primary)]">
           Fisioevolusion<br />
         </h1>
@@ -98,13 +151,13 @@
           Reserva tu cita
         </a>
       </div>
-      <div class="md:w-1/2">
+      <div class="md:w-1/2 slide-right">
         <img src="imgs/rehabilitacion_fisica.jpg" alt="Fisioterapia profesional" class="w-full max-w-xl mx-auto" />
       </div>
     </section>
 
     <!-- CURIOSIDADES -->
-    <section class="mt-20 bg-[var(--color-secondary)] rounded-lg p-8 text-white text-center shadow-lg">
+    <section class="mt-20 bg-[var(--color-secondary)] rounded-lg p-8 text-white text-center shadow-lg fade-section">
       <h2 class="text-2xl font-bold mb-4">¿Sabías que...?</h2>
       <p id="dato-curioso" class="text-lg">La fisioterapia ayuda a reducir el uso de medicamentos para el dolor crónico.</p>
     </section>
@@ -113,7 +166,7 @@
     <section class="mt-20">
       <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-10 text-center">Nuestros Servicios</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center slide-right">
           <div class="mb-5 text-[var(--color-secondary)]">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -124,7 +177,7 @@
           <p class="text-gray-600">Tratamientos personalizados para recuperar tu movilidad y calidad de vida.</p>
         </article>
 
-        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center slide-left">
           <div class="mb-5 text-[var(--color-secondary)]">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
               <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
@@ -135,7 +188,7 @@
           <p class="text-gray-600">Técnicas especializadas para aliviar el dolor muscular y mejorar la función.</p>
         </article>
 
-        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center slide-right">
           <div class="mb-5 text-[var(--color-secondary)]">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m-6-8h6" />
@@ -149,7 +202,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="mt-28 bg-[var(--color-primary)] rounded-lg p-12 max-w-4xl mx-auto text-center text-white shadow-lg">
+    <section class="mt-28 bg-[var(--color-primary)] rounded-lg p-12 max-w-4xl mx-auto text-center text-white shadow-lg fade-section">
       <h2 class="text-4xl font-extrabold mb-6">¿Quieres empezar tu recuperación hoy?</h2>
       <p class="mb-8 text-lg max-w-xl mx-auto">Contáctanos y recibe asesoría profesional personalizada.</p>
       <a href="https://wa.link/mbeasv" class="inline-block bg-[var(--color-secondary)] hover:bg-[#007c8a] transition font-semibold rounded-md px-10 py-4" title="Agenda tu cita">
@@ -165,31 +218,43 @@
   </footer>
 
   <script>
-  // Menú móvil toggle
-  const btnMenu = document.getElementById('btn-menu');
-  const menuMovil = document.getElementById('menu-movil');
-  btnMenu.addEventListener('click', () => {
-    menuMovil.classList.toggle('hidden');
-  });
+    const btnMenu = document.getElementById('btn-menu');
+    const menuMovil = document.getElementById('menu-movil');
+    btnMenu.addEventListener('click', () => {
+      menuMovil.classList.toggle('hidden');
+    });
 
-  // Curiosidades dinámicas
-  const datosCuriosos = [
-    "La fisioterapia ayuda a reducir el uso de medicamentos para el dolor crónico.",
-    "Una buena postura previene muchas lesiones musculoesqueléticas.",
-    "La fisioterapia acelera la recuperación después de una cirugía.",
-    "Los fisioterapeutas también tratan trastornos neurológicos como el Parkinson o la parálisis cerebral.",
-    "El ejercicio terapéutico es una de las herramientas más efectivas para la rehabilitación."
-  ];
+    const datosCuriosos = [
+      "La fisioterapia ayuda a reducir el uso de medicamentos para el dolor crónico.",
+      "Una buena postura previene muchas lesiones musculoesqueléticas.",
+      "La fisioterapia acelera la recuperación después de una cirugía.",
+      "Los fisioterapeutas también tratan trastornos neurológicos como el Parkinson o la parálisis cerebral.",
+      "El ejercicio terapéutico es una de las herramientas más efectivas para la rehabilitación."
+    ];
 
-  const elementoDato = document.getElementById("dato-curioso");
+    const elementoDato = document.getElementById("dato-curioso");
+    let indiceActual = 0;
+    setInterval(() => {
+      indiceActual = (indiceActual + 1) % datosCuriosos.length;
+      elementoDato.textContent = datosCuriosos[indiceActual];
+    }, 7000);
 
-  let indiceActual = 0;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
 
-  setInterval(() => {
-    indiceActual = (indiceActual + 1) % datosCuriosos.length;
-    elementoDato.textContent = datosCuriosos[indiceActual];
-  }, 7000); // Cambia cada 7 segundos
-</script>
+    document.querySelectorAll('.fade-section, .zoom-section, .slide-left, .slide-right').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
