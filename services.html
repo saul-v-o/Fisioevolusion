@@ -6,24 +6,82 @@
   <title>Servicios | Fisioevolusion</title>
 
   <link rel="icon" type="image/x-icon" href="imgs/logo.png">
-  <!-- Google Fonts Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap&language=Spanish" rel="stylesheet" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root {
-      --color-primary: #005f73;
-      --color-secondary: #0a9396;
+      --color-primary: #013476;
+      --color-secondary: #00a0ac;
+      --color-secondary2: #bee9ec;
+      --color-secondary3: #f1fcfd;
       --color-text-dark: #001219;
       --color-gray-light: #94a1b2;
     }
 
+    html, body {
+      overflow-x: hidden; 
+      width: 100%;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins';
       background-color: #f0f4f8;
       color: var(--color-text-dark);
+    }
+
+    .fade-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .zoom-section {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 1.6s ease-out;
+    }
+
+    .zoom-section.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .slide-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 1.6s ease-out;
+    }
+
+    .slide-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slide-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 1.6s ease-out;
+    }
+
+    .slide-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .img-service {
+      width: 100%;
+      height: 200px; 
+      object-fit: cover;
+      margin-top: 55px;
     }
   </style>
 </head>
@@ -43,7 +101,7 @@
   <!-- HEADER -->
  <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
     <div class="container mx-auto flex items-center justify-between p-4">
-      <img src="imgs/logo.png" alt="Fisioevolusion" class="h-10" />
+      <img src="imgs/logo.png" alt="Fisioevolusion" class="h-10 logo" />
       <nav class="hidden md:flex space-x-12 font-semibold text-lg">
         <a href="index.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Inicio">Inicio</a>
         <a href="services.html" class="hover:text-[var(--color-secondary)] transition" title="Ir a Servicios">Servicios</a>
@@ -59,7 +117,7 @@
         </svg>
       </button>
     </div>
-    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md">
+    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md transform transition-transform duration-10 ease-in-out scale-y-0 origin-top">
       <a href="index.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Inicio">Inicio</a>
       <a href="services.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Servicios">Servicios</a>
       <a href="about.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Nosotros">Nosotros</a>
@@ -73,52 +131,61 @@
 
     <!-- SERVICIOS -->
     <section class="mt-12">
-      <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-10 text-center">Nuestros Servicios</h2>
+      <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-10 text-center fade-section">Nuestros Servicios</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Servicio 1 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Dolor de Nervio Ciático</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-left">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Dolor de Nervio Ciático</h3>
           <p class="text-gray-600">Tratamiento especializado para aliviar el dolor intenso causado por la compresión o irritación del nervio ciático.</p>
+          <img src="imgs/nervio_ciatico.jpg" alt="Dolor de Nervio Ciático" class="rounded-2xl shadow-md max-w-xs md:max-w-sm  img-service" />
         </div>
         <!-- Servicio 2 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Hernias Discales</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-right">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Hernias Discales</h3>
           <p class="text-gray-600">Tratamientos especializados para aliviar el dolor y mejorar la movilidad en casos de hernias discales en la columna vertebral.</p>
+          <img src="imgs/hernia_discal.jpg" alt="Hernias Discales" class="rounded-2xl shadow-md max-w-xs md:max-w-sm  img-service" />
         </div>
         <!-- Servicio 3 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Lesiones Deportivas</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-left">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Lesiones Deportivas</h3>
           <p class="text-gray-600">Rehabilitación para lesiones deportivas, ayudando a recuperar la fuerza y flexibilidad necesarias para volver a la actividad física.</p>
+          <img src="imgs/lesion_deportiva.jpg" alt="Lesiones Deportivas" class="rounded-2xl shadow-md max-w-xs md:max-w-sm  img-service">
         </div>
         <!-- Servicio 4 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Dolor de Espalda</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-right">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Dolor de Espalda</h3>
           <p class="text-gray-600">Evaluación y terapias personalizadas para el dolor crónico o agudo en la espalda, incluyendo la zona lumbar y dorsal.</p>
+          <img src="imgs/dolor_de_espalda.jpg" alt="Dolor de Espalda" class="rounded-2xl shadow-md max-w-xs md:max-w-sm  img-service">
         </div>
         <!-- Servicio 5 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Rodilla</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-left">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Rodilla</h3>
           <p class="text-gray-600">Rehabilitación y tratamiento para lesiones, dolor o incomodidad en la rodilla, promoviendo su funcionalidad y recuperación.</p>
+          <img src="imgs/dolor_de_rodilla.png" alt="Dolor de Rodilla" class="rounded-2xl shadow-md max-w-xs md:max-w-sm  img-service">
         </div>
         <!-- Servicio 6 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Esguinces</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-right">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Esguinces</h3>
           <p class="text-gray-600">Atención integral para la recuperación de esguinces, con un enfoque en la movilidad y la reducción del dolor.</p>
+          <img src="imgs/esguince.jpg" alt="Esguinces" class="rounded-2xl shadow-md max-w-xs md:max-w-sm  img-service">
         </div>
         <!-- Servicio 7 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Luxaciones y Subluxaciones</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-left">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Luxaciones y Subluxaciones</h3>
           <p class="text-gray-600">Tratamiento para la recuperación de luxaciones o subluxaciones articulares, restaurando la función y reduciendo el dolor.</p>
+          <img src="imgs/luxaciones.jpg" alt="Luxaciones y Subluxaciones" class="rounded-2xl shadow-md max-w-xs md:max-w-sm  img-service">
         </div>
         <!-- Servicio 8 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Post Operados</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-right">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Post Operados</h3>
           <p class="text-gray-600">Recuperación postquirúrgica mediante terapias que mejoran la movilidad, fuerza y funcionalidad después de una operación.</p>
+          <img src="imgs/postoperados.jpg" alt="Post Operados" class="rounded-2xl shadow-md max-w-xs md:max-w-sm  img-service">
         </div>
         <!-- Servicio 9 -->
-        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
-          <h3 class="text-xl font-semibold mb-3">Masajes Deportivos</h3>
+        <div class="bg-[var(--color-secondary3)] rounded-lg shadow-md hover:shadow-lg transition p-6 hover:scale-105 transition-transform duration-300 slide-left">
+          <h3 class="text-xl text-[var(--color-primary)] font-semibold mb-3">Masajes Deportivos</h3>
           <p class="text-gray-600">Masajes especializados para aliviar tensiones, mejorar la circulación y promover una recuperación rápida después del ejercicio físico.</p>
+          <img src="imgs/masaje-deportivo.jpg" alt="Masajes Deportivos" class="rounded-2xl shadow-md max-w-xs md:max-w-sm img-service">
         </div>
       </div>
     </section>
@@ -140,8 +207,36 @@
   const btnMenu = document.getElementById('btn-menu');
   const menuMovil = document.getElementById('menu-movil');
   btnMenu.addEventListener('click', () => {
-    menuMovil.classList.toggle('hidden');
+    if (menuMovil.classList.contains('hidden')) {
+      menuMovil.classList.remove('hidden');
+      setTimeout(() => {
+        menuMovil.classList.remove('scale-y-0');
+        menuMovil.classList.add('scale-y-100');
+      }, 10);
+    } else {
+      menuMovil.classList.remove('scale-y-100');
+      menuMovil.classList.add('scale-y-0');
+      setTimeout(() => {
+        menuMovil.classList.add('hidden');
+      }, 10); // debe coincidir con `duration-300`
+    }
   });
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-section, .zoom-section, .slide-left, .slide-right').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>

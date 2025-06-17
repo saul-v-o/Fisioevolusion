@@ -7,22 +7,73 @@
 
   <link rel="icon" type="image/x-icon" href="imgs/logo.png">
   
-  <!-- Google Fonts Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap&language=Spanish" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root {
-      --color-primary: #005f73;
-      --color-secondary: #0a9396;
+      --color-primary: #013476;
+      --color-secondary: #00a0ac;
+      --color-secondary2: #bee9ec;
+      --color-secondary3: #f1fcfd;
       --color-text-dark: #001219;
       --color-gray-light: #94a1b2;
     }
 
+    html, body {
+      overflow-x: hidden; 
+      width: 100%;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins';
       background-color: #f0f4f8;
       color: var(--color-text-dark);
+    }
+
+    .fade-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .zoom-section {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 1.6s ease-out;
+    }
+
+    .zoom-section.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .slide-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 1.6s ease-out;
+    }
+
+    .slide-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slide-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 1.6s ease-out;
+    }
+
+    .slide-right.visible {
+      opacity: 1;
+      transform: translateX(0);
     }
   </style>
 </head>
@@ -58,7 +109,7 @@
         </svg>
       </button>
     </div>
-    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md">
+    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md transform transition-transform duration-10 ease-in-out scale-y-0 origin-top">
       <a href="index.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Inicio">Inicio</a>
       <a href="services.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Servicios">Servicios</a>
       <a href="about.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Nosotros">Nosotros</a>
@@ -68,16 +119,16 @@
   </header>
 
   <!-- CONTENIDO -->
-  <main class="pt-24 container mx-auto px-6 max-w-7xl font-sans text-gray-800">
+  <main class="pt-24 container mx-auto px-6 max-w-7xl text-gray-800">
 
   <section id="contact" class="mt-16">
 
-    <h2 class="text-4xl font-bold mb-8 text-[var(--color-primary)]">Contáctanos</h2>
+    <h2 class="text-4xl font-bold mb-8 text-[var(--color-primary)] slide-left">Contáctanos</h2>
 
     <div class="flex flex-col md:flex-row gap-12">
 
       <!-- Mapa -->
-      <div class="md:w-1/2 rounded-lg overflow-hidden">
+      <div class="md:w-1/2 rounded-lg overflow-hidden fade-section">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.6622458040774!2d-106.42776472444451!3d23.255374707600094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f53133406bb9f%3A0x2ffb7157c1c3a8d6!2sFisioevolusion!5e0!3m2!1ses!2smx!4v1732823498622!5m2!1ses!2smx"
           width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
@@ -85,7 +136,7 @@
       </div>
 
       <!-- Información -->
-      <div class="md:w-1/2 flex flex-col justify-center text-lg space-y-6">
+      <div class="md:w-1/2 flex flex-col justify-center text-lg space-y-6 zoom-section">
         <p><strong class="text-[var(--color-primary)]">Dirección:</strong> Calle Jacinto Vázquez #258 Colonia Fco. Villa, Mazatlán, Sinaloa</p>
         <p><strong class="text-[var(--color-primary)]">Teléfono:</strong> (669) 274 6885</p>
         <p>
@@ -98,7 +149,7 @@
 
     </div>
 
-    <div class="mt-16 text-lg max-w-md mx-auto space-y-6">
+    <div class="mt-16 text-lg max-w-md mx-auto space-y-6 fade-section">
 
       <h3 class="text-2xl font-semibold text-[var(--color-primary)] mb-4 text-center">Horarios de atención</h3>
 
@@ -107,7 +158,7 @@
       <p><strong class="text-[var(--color-secondary)]">Domingos:</strong> Cerrado</p>
     </div>
 
-    <div class="mt-16 text-lg max-w-md mx-auto space-y-6">
+    <div class="mt-16 text-lg max-w-md mx-auto space-y-6 slide-left">
       <h3 class="text-2xl font-semibold text-[var(--color-primary)] mt-12 mb-4 text-center">Síguenos en nuestras redes sociales</h3>
 
       <p class="flex justify-center gap-6">
@@ -142,8 +193,36 @@
   const btnMenu = document.getElementById('btn-menu');
   const menuMovil = document.getElementById('menu-movil');
   btnMenu.addEventListener('click', () => {
-    menuMovil.classList.toggle('hidden');
+    if (menuMovil.classList.contains('hidden')) {
+      menuMovil.classList.remove('hidden');
+      setTimeout(() => {
+        menuMovil.classList.remove('scale-y-0');
+        menuMovil.classList.add('scale-y-100');
+      }, 10);
+    } else {
+      menuMovil.classList.remove('scale-y-100');
+      menuMovil.classList.add('scale-y-0');
+      setTimeout(() => {
+        menuMovil.classList.add('hidden');
+      }, 10); // debe coincidir con `duration-300`
+    }
   });
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-section, .zoom-section, .slide-left, .slide-right').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>

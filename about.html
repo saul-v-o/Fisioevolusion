@@ -7,23 +7,76 @@
 
   <link rel="icon" type="image/x-icon" href="imgs/logo.png">
   
-  <!-- Google Fonts Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap&language=Spanish" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root {
-      --color-primary: #005f73;
-      --color-secondary: #0a9396;
+      --color-primary: #013476;
+      --color-secondary: #00a0ac;
+      --color-secondary2: #bee9ec;
+      --color-secondary3: #f1fcfd;
       --color-text-dark: #001219;
       --color-gray-light: #94a1b2;
     }
 
+    html, body {
+      overflow-x: hidden; 
+      width: 100%;
+    }
+
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins';
       background-color: #f0f4f8;
       color: var(--color-text-dark);
     }
+
+    .fade-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .zoom-section {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 1.6s ease-out;
+    }
+
+    .zoom-section.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .slide-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 1.6s ease-out;
+    }
+
+    .slide-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slide-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 1.6s ease-out;
+    }
+
+    .slide-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
   </style>
 </head>
 
@@ -58,7 +111,7 @@
         </svg>
       </button>
     </div>
-    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md">
+    <nav id="menu-movil" class="hidden md:hidden bg-white shadow-md transform transition-transform duration-10 ease-in-out scale-y-0 origin-top">
       <a href="index.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Inicio">Inicio</a>
       <a href="services.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Servicios">Servicios</a>
       <a href="about.html" class="block px-6 py-3 border-b border-gray-200 hover:bg-[var(--color-secondary)] hover:text-white font-semibold" title="Ir a Nosotros">Nosotros</a>
@@ -68,29 +121,29 @@
   </header>
 
   <!-- CONTENIDO -->
-  <main class="pt-28 px-6 max-w-6xl mx-auto font-sans text-gray-800 space-y-16">
+  <main class="pt-28 px-6 max-w-6xl mx-auto text-gray-800 space-y-16">
 
     <!-- Sección: Sobre la clínica -->
     <section>
-      <p class="text-lg leading-relaxed">
+      <p class="text-lg leading-relaxed slide-right">
         En 2024 se fundó <span class="font-semibold text-[var(--color-secondary)]">Fisioevolusion</span> con la visión de ofrecer un servicio especializado en fisioterapia para ayudar a las personas a recuperar su bienestar físico y emocional. Fundada por personal profesional con experiencia, nuestra clínica se enfoca en brindar <span class="text-[var(--color-secondary)] font-medium">tratamientos personalizados</span> adaptados a cada paciente, siempre con el compromiso de ofrecer un trato cercano y de calidad.
       </p>
-      <div class="flex justify-center mt-10">
+      <div class="flex justify-center mt-10 fade-section">
           <img src="imgs/inauguracion.jpeg" alt="Fisioevolusion" class="rounded-2xl shadow-md max-w-xs md:max-w-sm hover:scale-105 transition-transform duration-300" />
         </div>
     </section>
 
-    <div class="border-b-4 border-[var(--color-secondary)] pb-2">
+    <div class="border-b-4 border-[var(--color-secondary)] pb-2 slide-right">
 
     </div>
 
     <!-- Sección: Sobre el fisioterapeuta -->
     <section>
-      <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-8 text-center ">
+      <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-8 text-center slide-left">
         ¡Conoce a los expertos!
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div class="space-y-4 text-lg leading-relaxed text-gray-700">
+        <div class="space-y-4 text-lg leading-relaxed text-gray-700 slide-left">
           <p>
             Hola, qué tal, soy <span class="font-bold text-[var(--color-secondary)]">Obed García</span>, licenciado en terapia física egresado de la Universidad Politécnica de Sinaloa.
           </p>
@@ -101,7 +154,7 @@
             <em class="text-[var(--color-secondary)]">La disciplina siempre será clave para llevarte a donde la motivación no alcanza.</em>
           </p>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center zoom-section">
           <img src="imgs/fisioterapeuta.jpg" alt="Fisioterapeuta Obed García" class="rounded-2xl shadow-md max-w-xs md:max-w-sm hover:scale-105 transition-transform duration-300" />
         </div>
       </div>
@@ -118,8 +171,37 @@
   const btnMenu = document.getElementById('btn-menu');
   const menuMovil = document.getElementById('menu-movil');
   btnMenu.addEventListener('click', () => {
-    menuMovil.classList.toggle('hidden');
+    if (menuMovil.classList.contains('hidden')) {
+      menuMovil.classList.remove('hidden');
+      setTimeout(() => {
+        menuMovil.classList.remove('scale-y-0');
+        menuMovil.classList.add('scale-y-100');
+      }, 10);
+    } else {
+      menuMovil.classList.remove('scale-y-100');
+      menuMovil.classList.add('scale-y-0');
+      setTimeout(() => {
+        menuMovil.classList.add('hidden');
+      }, 10); // debe coincidir con `duration-300`
+    }
   });
+
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-section, .zoom-section, .slide-left, .slide-right').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>
